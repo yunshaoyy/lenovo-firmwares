@@ -1,0 +1,16 @@
+https://www.zui.com/iunlock
+
+get bootloader_sn
+way1：
+adb reboot bootloader
+fastboot getvar all
+Bootloader_SN = Bootloader_SN_Part1 + Bootloader_SN_Part2
+way2：
+adb shell getprop ro.boot.bootload_sn
+
+get sn.img
+http://cdn.zui.lenovomm.com/developer/enhancedboot/bootloader_sn/sn.img
+
+fastboot flash unlock sn.img
+
+fastboot oem unlock-go
