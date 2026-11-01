@@ -1,6 +1,3 @@
 $url = (Invoke-WebRequest -Uri "https://ptstpd.lenovo.com.cn/home/ConfigurationQuery/getPadFlashingMachine" -Method POST -ContentType "application/json" -Body '{"mtm":"ZAFT0002CN"}').Content | ConvertFrom-Json | ForEach-Object { $_.data[0].download_url }; Write-Output $url; Start-Process $url
 
 http://zsk-cdn.lenovows.com/%e7%9f%a5%e8%af%86%e5%ba%93/Flash_tool_image/
-
-
-FC(fv:SknR
